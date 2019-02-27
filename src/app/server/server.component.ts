@@ -10,6 +10,10 @@ export class ServerComponent {
     // tslint:disable-next-line:no-inferrable-types
     serverStatus: string = 'offline';
 
+    constructor() {
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+
     getServerStatus() {
         return this.serverStatus;
     }
